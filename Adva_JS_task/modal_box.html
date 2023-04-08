@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+        #btn{
+            background-color: coral;
+            border: 1px solid #000;
+            padding: 10px;
+            font-size: 20px;
+            color: #fff;
+        }
+       .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.4); 
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 40%; 
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .close:hover,.close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="btn" onclick="mydemo1()">Demo Modal</button>
+
+    <div id="mymodal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="mydemo()">&times;</span>
+            <h2>Modal titel</h2>
+            <p>Some text in the Modal Body</p>
+            <button id="closebtn" onclick="mydemo()">Close</button>
+            <button id="save" onclick="mydemo()">Save Changes</button>
+        </div>
+        <div class="modal-body">
+            
+        </div>
+    </div>
+
+    <script>
+
+        var modal = document.getElementById('mymodal');
+        var btn = document.getElementById('btn');
+        var span = document.getElementsByClassName('close')[0];
+
+        function mydemo() {
+            modal.style.display = "none";
+        }
+
+        function mydemo1() {
+            modal.style.display = "block";
+        }
+        
+    </script>
+
+</body>
+</html>

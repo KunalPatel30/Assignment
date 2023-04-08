@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validation</title>
+    <link rel="stylesheet" href="validation1.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0%;
+        margin: 0%;
+      }
+      body {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        color: black;
+      }
+      .container {
+        font-size: 20px;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .container form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding: 10px 10px;
+        max-width: 500px;
+        border-radius: 5px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+      }
+      .input-control {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin: 10px;
+      }
+      .input-control label {
+        flex-basis: 28%;
+      }
+
+      ::placeholder {
+        font-size: 14px;
+      }
+      .input-control input,
+      textarea {
+        flex-basis: 68%;
+        padding: 10px 40px 10px 10px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+      }
+      .input-control span {
+        padding: 0px 3px;
+        position: absolute;
+        bottom: 13px;
+        right: 15px;
+        font-size: 14px;
+        color: red;
+      }
+      .input-control span i {
+        color: green;
+      }
+      form button {
+        padding: 5px 20px;
+        font-size: 14px;
+        outline: transparent;
+      }
+      form span {
+        color: red;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="">
+        <h3>REGISTRATION FORM</h3>
+        <div class="input-control">
+          <label for="">Full Name:</label>
+          <input
+            type="text"
+            placeholder="Enter Your Name"
+            id="input-name"
+            onkeyup="validateName()"
+          />
+          <span id="name-error"></span>
+        </div>
+        <div class="input-control">
+          <label for="">Phone:</label>
+          <input
+            type="text"
+            placeholder="Enter Your Number"
+            id="input-phone"
+            onkeyup="validatePhone()"
+          />
+          <span id="phone-error"></span>
+        </div>
+        <div class="input-control">
+          <label for="">Email:</label>
+          <input
+            type="text"
+            placeholder="Enter Your Email"
+            id="input-email"
+            onkeyup="validateEmail()"
+          />
+          <span id="email-error"></span>
+        </div>
+        <div class="input-control">
+          <label for="">Comment:</label>
+          <textarea
+            name=""
+            id="input-msg"
+            cols="30"
+            rows="5"
+            placeholder="Enter Your Message"
+            onkeyup="validateMsg()"
+          ></textarea>
+          <span id="msg-error"></span>
+        </div>
+
+        <button type="submit" onclick="return validateForm()">Submit</button>
+        <span id="submit-error"></span>
+      </form>
+    </div>
+    <script>
+      var nameError = document.getElementById("name-error");
+      var phoneError = document.getElementById("phone-error");
+      var emailError = document.getElementById("email-error");
+      var msgError = document.getElementById("msg-error");
+      var submitError = document.getElementById("submit-error");
+
+      function validateName() {
+        var name = document.getElementById("input-name").value;
+
+        if (name.length == 0) {
+          nameError.innerHTML = "Name is required";
+          return false;
+        }
+        if (!name.match(/^[a-zA-Z]*\s{1}[a-zA-z]*$/)) {
+          nameError.innerHTML = "Write Full Name";
+          return false;
+        }
+        nameError.innerHTML = '<i class="fa fa-check-square"></i>';
+        return true;
+      }
+
+      function validatePhone() {
+        var phone = document.getElementById("input-phone").value;
+
+        if (phone.length == 0) {
+          phoneError.innerHTML = "Number is required";
+          return false;
+        }
+        if (!phone.match(/^[0-9]{10,11}$/)) {
+          phoneError.innerHTML = "Enter Valid Number in 10 digits";
+          return false;
+        }
+        phoneError.innerHTML = '<i class="fa fa-check-square"></i>';
+        return true;
+      }
+
+      function validateEmail() {
+        var email = document.getElementById("input-email").value;
+
+        if (email.length == 0) {
+          emailError.innerHTML = "Email is required";
+          return false;
+        }
+        if (!email.match(/^[a-zA-Z0-9]*\@{1}[a-z]*\.{1}[a-z]*$/)) {
+          emailError.innerHTML = "Enter Valid Email ID";
+          return false;
+        }
+        emailError.innerHTML = '<i class="fa fa-check-square"></i>';
+        return true;
+      }
+
+      function validateMsg() {
+        var msg = document.getElementById("input-msg").value;
+        var counter = 30;
+        var done = counter - msg.length;
+
+        if (done > 0) {
+          msgError.innerHTML = `${done} character more required`;
+          return false;
+        }
+        msgError.innerHTML = '<i class="fa fa-check-square"></i>';
+        return true;
+      }
+
+      function validateForm() {
+        if (
+          !validateName() ||
+          !validatePhone() ||
+          !validateEmail() ||
+          !validateMsg()
+        ) {
+          submitError.style.display = "block";
+          submitError.innerHTML = "Please enter valid details to submit";
+          setTimeout(function () {
+            submitError.style.display = "none";
+          }, 3000);
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
