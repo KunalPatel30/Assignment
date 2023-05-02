@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .main{
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('https://wallpaperaccess.com/full/2637771.jpg');
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+        }
+        .box{
+            width: 380px;
+            height: 480px;
+            position: relative;
+            margin: 6% auto;
+            background: #fff;
+            padding: 5px;
+        }
+        .button-box{
+            width: 220px;
+            margin: 35px auto;
+            position: relative;
+            box-shadow: 0 0 20px 9px #ff61241f;
+            border-radius: 30px;
+            background: linear-gradient(to right, #ff105f, #ffad06);
+            border-radius: 30px;
+            text-align: center;
+        }
+        .toggle-btn{
+            padding: 10px 30px;
+            cursor: pointer;
+            background: transparent;
+            border: 0;
+            outline: none;
+            position: relative;
+        }
+        .social-icon{
+            margin: 30px auto;
+            text-align: center;
+        }
+        .social-icon i{
+            width: 37px;
+            padding: 10px 10px;
+            background: linear-gradient(to right, #ff105f, #ffad06);
+            color: #fff;
+            margin: 0 12px;
+            box-shadow: 0 0 20px #7f7f7f3d;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 18px;
+        }
+        .input{
+            top: 180px;
+            position: absolute;
+            width: 280px;
+            transition: .5s;
+        }
+        .input-field{
+            width: 100%;
+            padding: 10px 0;
+            margin: 5px 0;
+            border-left: 0;
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 1px solid #999;
+            outline: none;
+            background: transparent;
+        }
+        .submit-btn{
+            width: 85%;
+            padding: 10px 30px;
+            cursor: pointer;
+            display: block;
+            margin: auto;
+            background: linear-gradient(to right, #ff105f, #ffad06);
+            border: 0;
+            outline: none;
+            border-radius: 30px;
+        }
+        .Check-box{
+            margin: 30px 10px 30px 0;
+        }
+        span{
+            color: #777;
+            font-size: 12px;
+            bottom: 68px;
+            position: absolute;
+        }
+        #register{
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+            <div class="button-box">
+                <button type="button" class="toggle-btn">Registration Form</button>
+            </div>
+            <div class="social-icon">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-google" aria-hidden="true"></i>
+            </div>
+            <form action="" id="register" class="input">
+                <input type="text" class="input-field" placeholder="User Id" required>
+                <input type="email" class="input-field" placeholder="Email Id" required>
+                <input type="text" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="Check-box"><span>I agree to the terms & conditions</span>
+                <button type="submit" class="submit-btn">Register / Log In</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
