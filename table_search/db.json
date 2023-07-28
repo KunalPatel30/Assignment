@@ -1,0 +1,76 @@
+{
+    "user":[
+          {
+            "id": "1689521116862",
+            "name": "Kunal Patel",
+            "email": "kp@gmail.com",
+            "mobile": "7984846113",
+            "password": "3001",
+            "url": "https://s27.q4cdn.com/936913558/files/doc_person/2023/Feb/Adam-updated-headshot-(1)_EGcUEwQgV.png",
+            "status": "Unblock"
+          },
+          {
+            "id": "1689523583781",
+            "name": "Milan Patel",
+            "email": "m@gmail.com",
+            "mobile": "01232589634",
+            "password": "1404",
+            "url":"https://www.nicepng.com/png/full/182-1829287_cammy-lin-ux-designer-circle-picture-profile-girl.png",
+            "status": "Block"
+          },
+          {
+            "id": "1689521456875",
+            "name": "Parth",
+            "email": "p@gmail.com",
+            "mobile": "1474569635",
+            "password": "1206",
+            "url": "https://s27.q4cdn.com/936913558/files/doc_person/2023/Feb/Adam-updated-headshot-(1)_EGcUEwQgV.png",
+            "status": "Unblock"
+          },
+          {
+            "id": "1689523654215",
+            "name": "Khushi",
+            "email": "gupta@gmail.com",
+            "mobile": "07898521476",
+            "password": "1234",
+            "url":"https://www.nicepng.com/png/full/182-1829287_cammy-lin-ux-designer-circle-picture-profile-girl.png",
+            "status": "Unblock"
+          },
+          {
+            "id": "1689521456875",
+            "name": "Aman",
+            "email": "aman@gmail.com",
+            "mobile": "1474569635",
+            "password": "1206",
+            "url": "https://s27.q4cdn.com/936913558/files/doc_person/2023/Feb/Adam-updated-headshot-(1)_EGcUEwQgV.png",
+            "status": "Block"
+          },
+          {
+            "id": "1689521456875",
+            "name": "Meet",
+            "email": "meet@gmail.com",
+            "mobile": "1474569635",
+            "password": "1206",
+            "url":"https://www.nicepng.com/png/full/182-1829287_cammy-lin-ux-designer-circle-picture-profile-girl.png",
+            "status": "Unblock"
+          },
+          {
+            "id": "1689521456875",
+            "name": "Divyaraj",
+            "email": "divu@gmail.com",
+            "mobile": "1474569635",
+            "password": "1206",
+            "url": "https://s27.q4cdn.com/936913558/files/doc_person/2023/Feb/Adam-updated-headshot-(1)_EGcUEwQgV.png",
+            "status": "Unblock"
+          },
+          {
+            "id": "1689521456875",
+            "name": "Paresh",
+            "email": "paresh@gmail.com",
+            "mobile": "1474569635",
+            "password": "1206",
+            "url":"https://www.nicepng.com/png/full/182-1829287_cammy-lin-ux-designer-circle-picture-profile-girl.png",
+            "status": "Unblock"
+          }
+    ]
+}
